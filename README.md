@@ -37,10 +37,9 @@ types Did
    data PgpKey :: curve U8, key Bytes
 
 schema DecentralizedIdentity
-   -- This defines the atom of the contract state called `Identity` 
-   -- which has data type `PgpKey`.
-   -- The `owned` keyword means that there is always a party
-   -- which owns the identity
+   -- This defines the atom of the contract state called `Identity` which has data 
+   -- type `PgpKey`.
+   -- The `owned` keyword means that there is always a party which owns the identity
    owned Identity :: Did.PgpKey
 
    owned IOYIssue :: Zk64
@@ -50,16 +49,14 @@ schema DecentralizedIdentity
    global IOYTicker :: String
    global IOYName :: String
 
-   -- This says that to construct contract the user must provide
-   -- information about exactly one identity and its IOY token
+   -- This says that to construct contract the user must provide information about 
+   -- exactly one identity and its IOY token
    genesis :: Identity, IOYTicker, IOYName
 
-   -- Now let's define what a owner of identity can do,
-   -- He can execute his rights by creating state transitions
-   -- ("operation" on the state) of predefined forms, like
+   -- Now let's define what a owner of identity can do by executing his/her rights 
+   -- via state transitions ("operation" on the state) of predefined forms, like
    op Revocation :: old Identity -> new Identity
-   -- which does what it says: it revokes existing identity
-   -- and creates a new one.
+   -- which does what it says: it revokes existing identity and creates a new one.
    
    -- This issues new IOY promises in tokenized form
    op Promise :: used IOYIssue -> given [IOYTokens]?, remaining IOYIssue?
@@ -109,17 +106,20 @@ contract meSatoshiNakamoto implements DecentralizedIdentity
    set IOYTicker := "SATN"
    set IOYName := "Satoshi Promises"
    -- this defines a genesis state and assigns it to a single-use-seal
-   assign orig Identity := (0xfac503c4641c3deda72a2d00bc9d6ff1094b15276c386efea403746a91436772, 1) 
-                        -> PgpKey(0, 0x028730eeeec41802621d177507b086f390ae600ba3ca5e428b13913af4c2cd25b3)
+   assign orig Identity := 
+     (0xfac503c4641c3deda72a2d00bc9d6ff1094b15276c386efea403746a91436772, 1) 
+   -> PgpKey(0, 0x028730eeeec41802621d177507b086f390ae600ba3ca5e428b13913af4c2cd25b3)
 
 transition iLostMyKey executes Revocation
-   via meSatoshiNakamoto.orig -- specifies the single-use-seal we close to match requirements
-                              -- on the valid operation execution conditions
-   assign upd Identity := (~, 2) -- here we use txid of the bitcoin transaction which will be
-                                 -- created to hold the commitment to this state transition, 
-                                 -- called "single-use-seal witness". Since we can not know the
-                                 -- txid upfront we use ~ to indicate the witness transaction id
-                       -> PgpKey(0, 0x0219db0a4e0eb8cb833608c08d76b9b279ec44a851ab82cc6fd68a9b32624bfa8b)
+   via meSatoshiNakamoto.orig -- specifies the single-use-seal we close to match 
+                              -- requirements on the valid operation execution 
+                              -- conditions
+   assign upd Identity := (~, 2) -- here we use txid of the bitcoin transaction which 
+                                 -- will be created to hold the commitment to this 
+                                 -- state transition, called "single-use-seal witness".
+                                 -- Since we can not know the txid upfront we use 
+                                 -- `~` sign to indicate the witness transaction id
+   -> PgpKey(0, 0x0219db0a4e0eb8cb833608c08d76b9b279ec44a851ab82cc6fd68a9b32624bfa8b)
    -- the above defines new state and assigns it to a single-use-seal
 ```
 
