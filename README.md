@@ -111,12 +111,12 @@ contract meSatoshiNakamoto implements DecentralizedIdentity
    -> PgpKey(0, 0x028730eeeec41802621d177507b086f390ae600ba3ca5e428b13913af4c2cd25b3)
 
 transition iLostMyKey executes Revocation
-   via meSatoshiNakamoto.orig -- specifies the single-use-seal we close to match 
-                              -- requirements on the valid operation execution 
+   via meSatoshiNakamoto.orig -- specifies the single-use-seal we close to match
+                              -- requirements on the valid operation execution
                               -- conditions
-   assign upd Identity := (~, 2) -- here we use txid of the bitcoin transaction which 
-                                 -- will be created to hold the commitment to this 
-                                 -- state transition, called "single-use-seal witness".
+   assign upd Identity := (~, 2) -- here we use txid of the bitcoin transaction
+                                 -- which will be created to hold the commitment to
+                                 -- this state transition, called "seal witness".
                                  -- Since we can not know the txid upfront we use 
                                  -- `~` sign to indicate the witness transaction id
    -> PgpKey(0, 0x0219db0a4e0eb8cb833608c08d76b9b279ec44a851ab82cc6fd68a9b32624bfa8b)
