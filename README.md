@@ -12,13 +12,21 @@ layout: landing
 
 ## RGB smart contracts
 
-Contractum is the language to write RGB contracts. RGB is a technology which allows creation of arbitrary-complex ("Turing-complete") smart contracts that run on bitcoin and, most imporangly, Lightning network. RGB contracts are confidential, scalable (up to the speed of the Lightning transactions, with small data footprint) and robust. They verified with client-side-validation, which does not adds data to a bitcoin blockchain and may be thought as a sharding technology, enhanced with zero-knowledge. Client-side-validation also breaks transaction graphs, unlinking contract evolution from blockchain transactions, making chain analysis impossible.
+Contractum is the language to write RGB contracts. RGB is a technology which allows creation of arbitrary-complex ("Turing-complete") smart contracts that run on bitcoin and, most imporangly, Lightning network. RGB contracts are confidential, scalable (up to the speed of the Lightning transactions, with small data footprint) and robust.
+
+<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><h3>Confidential</h3></td><td><ul><li>No blockchain footprint</li><li>No chainanalysis possible: contract breaks transaction graphs</li><li>Extensive use of zero-knowledge (bulletproofs)</li></ul></td></tr><tr><td><h3>Scalable</h3></td><td><ul><li>Do not increase transaction size and no block space usage</li><li>Sharded; data kept by contract parties and not each node</li><li>Operating with the speed of Lightning Network</li></ul></td></tr><tr><td><h3>Turing-complete</h3></td><td><ul><li>Arbitrary complex business logic</li><li>Enables #BiFi: bitcoin finance, which is much more robust and reliable than DeF</li><li>Operates without new tokens or <em>gas</em>; bitcoin is the native currency</li></ul></td></tr></tbody></table>
+
+Contracts written with Contractum are verified with client-side-validation, which does not adds data to a bitcoin blockchain and may be thought as a sharding technology, enhanced with zero-knowledge. Client-side-validation also breaks transaction graphs, unlinking contract evolution from blockchain transactions, making chain analysis impossible.
 
 Learn more about RGB smart contracts on the [RGB FAQ](https://app.gitbook.com/o/-MO35HartFKtUgrkgzLy/s/-MO36nlUvK8SxfXw1MFs/) website.
 
 ## Work in progress
 
 The contractum is a work in progress: the language design is under active development at the [LNP/BP Association](https://lnp-bp.org). Everyone is welcome to join the effort; a good starting point can be reading and writing to the [language design discussions group](https://github.com/RGB-WG/contractum-lang/discussions/categories/languague-design) in GitHub.
+
+To understand and participate in contractum design it is important to learn more about technologies which are used by RGB smart contracts:
+
+<table data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td><h3>Single-use-seals</h3></td><td>Client-side-validation relies on a deterministic commitment history named single-use-seals</td><td><a href="https://app.gitbook.com/s/-MO36nlUvK8SxfXw1MFs/rgb-paradigms/single-use-seals">Learn more</a></td></tr><tr><td><h3>AluVM</h3></td><td>Contractum runs code on AluVM virtual machine: functional registry-based RISC machine</td><td><a href="https://app.gitbook.com/o/-MO35HartFKtUgrkgzLy/s/-MdUUOAyT-Nw8wDf9HPZ/">Learn more</a></td></tr><tr><td><h3>Strict encoding</h3></td><td>RGB contracts uses special deterministic portable binary data type system and encoding</td><td><a href="https://app.gitbook.com/o/-MO35HartFKtUgrkgzLy/s/-McPRmdXp1jTEY27B57G/">Learn more</a></td></tr></tbody></table>
 
 ## The feel of the language
 
@@ -114,3 +122,7 @@ transition iLostMyKey executes Revocation
                        -> PgpKey(0, 0x0219db0a4e0eb8cb833608c08d76b9b279ec44a851ab82cc6fd68a9b32624bfa8b)
    -- the above defines new state and assigns it to a single-use-seal
 ```
+
+## About
+
+Contractum development is managed by a non-profit [LNP/BP Standards Association](https://lnp-bp.org). The language design and compiler implementation is lead by [Dr Maxim Orlovsky](https://github.com/dr-orlovsky).
