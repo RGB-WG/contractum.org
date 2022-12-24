@@ -20,6 +20,8 @@ Contracts written with Contractum are verified with client-side-validation, whic
 
 Learn more about RGB smart contracts on the [RGB FAQ](https://app.gitbook.com/o/-MO35HartFKtUgrkgzLy/s/-MO36nlUvK8SxfXw1MFs/) website.
 
+<figure><img src=".gitbook/assets/contractum-box-black.png" alt=""><figcaption><p>Contractum on a landscape of other languagues</p></figcaption></figure>
+
 ## Work in progress
 
 The contractum is a work in progress: the language design is under active development at the [LNP/BP Association](https://lnp-bp.org). Everyone is welcome to join the effort; a good starting point can be reading and writing to the [language design discussions group](https://github.com/RGB-WG/contractum-lang/discussions/categories/languague-design) in GitHub.
