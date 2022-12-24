@@ -10,6 +10,10 @@ layout: landing
 
 <table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><h3>Declarative</h3></td><td>Define contract state and operations in a simple declarative form, which is easy to write and understand</td></tr><tr><td><h3>Strong-typed</h3></td><td>State and contract operations take only known structured types</td></tr><tr><td><h3>Abstract</h3></td><td>Leverage interfaces, type libraries, schemata and schema hierarchy for code-reuse and reducing risks of mistakes</td></tr></tbody></table>
 
+Contractum differs from other smart contract programming languages in a fact that as functional as Haskell and nearly as close to the bare metal as Rust at the same time, filling in the space which was not accessible for the smart contracts before:
+
+<figure><img src=".gitbook/assets/contractum-box-black (1).png" alt=""><figcaption><p>Contractum on the landscape of other languages</p></figcaption></figure>
+
 ## RGB smart contracts
 
 Contractum is the language to write RGB contracts. RGB is a technology which allows creation of arbitrary-complex ("Turing-complete") smart contracts that run on bitcoin and, most imporangly, Lightning network. RGB contracts are confidential, scalable (up to the speed of the Lightning transactions, with small data footprint) and robust.
@@ -19,8 +23,6 @@ Contractum is the language to write RGB contracts. RGB is a technology which all
 Contracts written with Contractum are verified with client-side-validation, which does not adds data to a bitcoin blockchain and may be thought as a sharding technology, enhanced with zero-knowledge. Client-side-validation also breaks transaction graphs, unlinking contract evolution from blockchain transactions, making chain analysis impossible.
 
 Learn more about RGB smart contracts on the [RGB FAQ](https://app.gitbook.com/o/-MO35HartFKtUgrkgzLy/s/-MO36nlUvK8SxfXw1MFs/) website.
-
-<figure><img src=".gitbook/assets/contractum-box-black.png" alt=""><figcaption><p>Contractum on a landscape of other languagues</p></figcaption></figure>
 
 ## Work in progress
 
