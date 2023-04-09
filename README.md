@@ -1,7 +1,7 @@
 ---
 description: >-
   Contractum is a functional declarative programming language designed for
-  developing smart contracts which run on Bitcoin and Lightning network using
+  developing smart contracts which run on Bitcoin and Lightning Network using
   RGB technology.
 layout: landing
 ---
@@ -10,27 +10,27 @@ layout: landing
 
 <table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><h3>Declarative</h3></td><td>Define contract state and operations in a simple declarative form, which is easy to write and understand</td></tr><tr><td><h3>Strong-typed</h3></td><td>State and contract operations take only known structured types</td></tr><tr><td><h3>Abstract</h3></td><td>Leverage interfaces, type libraries, schemata and schema hierarchy for code-reuse and reducing risks of mistakes</td></tr></tbody></table>
 
-Contractum differs from other smart contract programming languages in a fact that as functional as Haskell and nearly as close to the bare metal as Rust at the same time, filling in the space which was not accessible for the smart contracts before:
+Contractum differs from other smart contract programming languages in a way that it's as functional as Haskell and nearly as close to the bare metal as Rust at the same time, filling in the space which has not been accessible for the smart contracts before:
 
 <figure><img src=".gitbook/assets/contractum-box-black (1).png" alt=""><figcaption><p>Contractum on the landscape of other languages</p></figcaption></figure>
 
 ## RGB smart contracts
 
-Contractum is the language to write RGB contracts. RGB is a technology which allows creation of arbitrary-complex ("Turing-complete") smart contracts that run on bitcoin and, most imporangly, Lightning network. RGB contracts are confidential, scalable (up to the speed of the Lightning transactions, with small data footprint) and robust.
+Contractum is the language for writing RGB contracts. RGB is a technology which allows the creation of arbitrary-complex ("Turing-complete") smart contracts that run on bitcoin and, most importantly, Lightning Network. RGB contracts are confidential, scalable (up to the speed of  Lightning transactions, with small data footprint) and robust.
 
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><h3>Confidential</h3></td><td><ul><li>No blockchain footprint</li><li>No chainanalysis possible: contract breaks transaction graphs</li><li>Extensive use of zero-knowledge (confidential transactions, bulletproofs)</li></ul></td></tr><tr><td><h3>Scalable</h3></td><td><ul><li>No transaction size increase, no block space usage</li><li>Sharded: data kept by contract parties and not each node</li><li>Operate with the speed of Lightning Network</li></ul></td></tr><tr><td><h3>Turing-complete</h3></td><td><ul><li>Arbitrary complex business logic</li><li><strong>#BiFi</strong>: bitcoin finance, which is much more robust and reliable than DeF</li><li>No tokens or <em>gas</em> required; bitcoin is the native currency</li></ul></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><h3>Confidential</h3></td><td><ul><li>No blockchain footprint</li><li>No chainanalysis possible: contract breaks transaction graphs</li><li>Extensive use of zero-knowledge (confidential transactions, bulletproofs)</li></ul></td></tr><tr><td><h3>Scalable</h3></td><td><ul><li>No transaction size increase, no block space usage</li><li>Sharded: data kept by the contract parties and not by each node</li><li>Operate with the speed of Lightning Network</li></ul></td></tr><tr><td><h3>Turing-complete</h3></td><td><ul><li>Arbitrary complex business logic</li><li><strong>#BiFi</strong>: bitcoin finance, which is much more robust and reliable than DeFi</li><li>No tokens or <em>gas</em> required; bitcoin is the native currency</li></ul></td></tr></tbody></table>
 
-Contracts written with Contractum are verified with client-side-validation, which does not adds data to a bitcoin blockchain and may be thought as a sharding technology, enhanced with zero-knowledge. Client-side-validation also breaks transaction graphs, unlinking contract evolution from blockchain transactions, making chain analysis impossible.
+Contracts written with Contractum are verified with client-side-validation, which does not add data to bitcoin blockchain and may be thought as a sharding technology, enhanced with zero-knowledge. Client-side-validation also breaks transaction graphs, unlinking contract evolution from blockchain transactions, making chain analysis impossible.
 
-Learn more about RGB smart contracts on the [RGB FAQ](https://app.gitbook.com/o/-MO35HartFKtUgrkgzLy/s/-MO36nlUvK8SxfXw1MFs/) website.
+Learn more about RGB smart contracts on the [RGB FAQ](https://rgbfaq.com) website.
 
 ## Work in progress
 
-The contractum is a work in progress: the language design is under active development at the [LNP/BP Association](https://lnp-bp.org). Everyone is welcome to join the effort; a good starting point can be reading and writing to the [language design discussions group](https://github.com/RGB-WG/contractum-lang/discussions/categories/languague-design) in GitHub.
+Contractum is a work in progress: the language design is under active development at the [LNP/BP Association](https://lnp-bp.org). Everyone is welcome to join the effort; a good starting point can be reading and writing to the [language design discussions group](https://github.com/RGB-WG/contractum-lang/discussions/categories/languague-design) on GitHub.
 
-To understand and participate in contractum design it is important to learn more about technologies which are used by RGB smart contracts:
+To understand and participate in Contractum design process it is important to learn more about technologies which are used by RGB smart contracts:
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td><h3>Single-use-seals</h3></td><td>Client-side-validation relies on a deterministic commitment history named single-use-seals</td><td><a href="https://app.gitbook.com/s/-MO36nlUvK8SxfXw1MFs/rgb-paradigms/single-use-seals">Learn more</a></td></tr><tr><td><h3>AluVM</h3></td><td>Contractum runs code on AluVM virtual machine: functional registry-based RISC machine</td><td><a href="https://app.gitbook.com/o/-MO35HartFKtUgrkgzLy/s/-MdUUOAyT-Nw8wDf9HPZ/">Learn more</a></td></tr><tr><td><h3>Strict encoding</h3></td><td>RGB contracts uses special deterministic portable binary data type system and encoding</td><td><a href="https://app.gitbook.com/o/-MO35HartFKtUgrkgzLy/s/-McPRmdXp1jTEY27B57G/">Learn more</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td><h3>Single-use-seals</h3></td><td>Client-side-validation relies on a deterministic commitment history named single-use-seals</td><td><a href="https://app.gitbook.com/s/-MO36nlUvK8SxfXw1MFs/rgb-paradigms/single-use-seals">Learn more</a></td></tr><tr><td><h3>AluVM</h3></td><td>Contractum runs code on AluVM virtual machine: functional registry-based RISC machine</td><td><a href="https://app.gitbook.com/o/-MO35HartFKtUgrkgzLy/s/-MdUUOAyT-Nw8wDf9HPZ/">Learn more</a></td></tr><tr><td><h3>Strict encoding</h3></td><td>RGB contracts use special deterministic portable binary data type system and encoding</td><td><a href="https://app.gitbook.com/o/-MO35HartFKtUgrkgzLy/s/-McPRmdXp1jTEY27B57G/">Learn more</a></td></tr></tbody></table>
 
 ## The feel of the language
 
@@ -53,14 +53,14 @@ schema DecentralizedIdentity
    global IOYTicker :: String
    global IOYName :: String
 
-   -- This says that to construct contract the user must provide information about 
+   -- This says that in order to construct a contract the user must provide information about 
    -- exactly one identity and its IOY token
    genesis :: Identity, IOYTicker, IOYName
 
-   -- Now let's define what a owner of identity can do by executing his/her rights 
+   -- Now let's define what an owner of an identity can do by executing his/her rights 
    -- via state transitions ("operation" on the state) of predefined forms, like
    op Revocation :: old Identity -> new Identity
-   -- which does what it says: it revokes existing identity and creates a new one.
+   -- which does what it says: it revokes the existing identity and creates a new one.
    
    -- This issues new IOY promises in tokenized form
    op Promise :: used IOYIssue -> given [IOYTokens]?, remaining IOYIssue?
